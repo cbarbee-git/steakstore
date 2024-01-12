@@ -3,6 +3,9 @@
     body {
         font-size: ( $body-font-size - 1 );
         &.page{
+            #main-menu{
+                margin: 1.5% 0 0 0;    
+            }
             &.home{
                 section{
                     .heading-title{
@@ -18,6 +21,12 @@
 
     body {
         font-size: ( $body-font-size - 2 );
+        #main-menu{
+            a {
+                padding: 10px 10px;
+            }
+        }
+
         &.page{
             &.home{
                 #hero {
@@ -64,11 +73,15 @@
         &.page {
             &.home{
                 #hero {
+                    min-height: 575px;
+
                     #hero-content{
                         h1{
                             font-size: $body-font-size + 20;
                         }
                         .ribbon{
+                            margin: 40px auto;
+
                             h2{
                                 padding: 5px 15px;
                                 font-size: $body-font-size + 4;
@@ -109,9 +122,6 @@
                     }
                 }
             }
-
-
-
 
             #page-content {
                 padding: 22% 3% 0 3%;
@@ -375,14 +385,15 @@
             &.home{
                 
                 #hero{
-                    min-height: 550px;
+                    min-height: 450px;
 
                     #hero-content{
-                        margin: 3% 14% 0 4%;
+                        margin: 10% 14% 0 4%;
 
                         h1 {
-                            font-size: $body-font-size + 18;
-                            line-height: 42px;
+                            font-size: $body-font-size + 8;
+                            margin-right: 90px;
+                            line-height: 38px;
                         }
 
                         .ribbon {
