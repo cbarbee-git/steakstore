@@ -36,8 +36,8 @@ function steakstore_add_meta_tags() {
         return;
     }
     if ( is_singular() ) {
-        $des_post = strip_tags( $post->post_content );
-        $des_post = strip_shortcodes( $post->post_content );
+        $des_post = strip_tags( $post->post_excerpt );
+        $des_post = strip_shortcodes( $des_post );
         $des_post = str_replace( array("\n", "\r", "\t"), ' ', $des_post );
         $des_post = mb_substr( $des_post, 0, 300, 'utf8' );
         echo '<meta name="description" content="' . $des_post . '" />' . "\n";
