@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-function steakstrore_theme_custom_sidebar() {
+function steakstore_theme_custom_sidebar() {
     global $theme_config;
     register_sidebar(
         array (
