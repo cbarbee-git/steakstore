@@ -1,0 +1,51 @@
+.animated {
+
+    /***** FadeIn  *****/
+    &.fadein {
+        animation: fadeIn ease 3s;
+    }
+    @keyframes fadeIn{
+        0% {
+            opacity:0;
+        }
+        100% {
+            opacity:1;
+        }
+    }
+
+    /***** Slide Left *****/
+    &.slide-left {
+        animation: 2s slide-left;
+    }
+    @keyframes slide-left {
+        from {
+            margin-left: 100%;
+        }
+        to {
+            margin-left: 0%;
+        }
+    }
+
+    /***** Slide Left and FadeIn *****/
+    &.slide-left-fadein {
+        animation: 2s slide-left, fadeIn ease 3s;
+    }
+
+    /***** Slide Right *****/
+    &.slide-right {
+        animation: 2s slide-right;
+    }
+    @keyframes slide-right {
+        from {
+            margin-left: -100%;
+        }
+        to {
+            margin-left: 0%;
+        }
+    } 
+
+    /***** Slide Left and FadeIn *****/
+    &.slide-right-fadein {
+        animation: 2s slide-right, fadeIn ease 3s;
+    }
+}

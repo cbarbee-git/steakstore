@@ -1,0 +1,94 @@
+/**
+ * Global settings
+ */
+
+ $max-width              : 1100px;
+ $margin                 : 20px;
+ $icon-size              : 48px;
+ $post-thumbnail-size    : 240px;
+ $nav-expand-icon-size   : 36px;
+ $input-height           : 36px;
+ $input-border           : 0;
+ $body-font-size         : 18.5px;
+ $theme_asset_imgpath    : 'assets/img/';
+
+ 
+ /**
+  * Font families are defined using the $fonts map and accessed via the font-family() function.
+  * For example, if you wanted to access the font 'Open Sans', you would use font-family('open-sans')
+  * The fonts used here must be setup in theme.config.php in order to be usable
+  */
+ 
+ $fonts: (
+     'arial':        #{Arial, 'Helvetica Neue', Helvetica, sans-serif},
+     'arial-narrow': #{'Arial Narrow', Arial, sans-serif},
+     'georgia':      #{Georgia, Times, 'Times New Roman', serif},
+     'monospace':    #{'Consolas', 'Courier New', Courier, monospace},
+     'verdana':      #{Verdana, Geneva, sans-serif},
+     'tahoma':       #{Tahoma, Verdana, Segoe, sans-serif },
+     'times':        #{TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif},
+     'font-awesome': #{"'Font Awesome 6 Free'"},
+     'open-sans':    #{'Open Sans', sans-serif},
+     'garamond':     #{'EB Garamond', serif},
+     'vast-shadow':  #{'Vast Shadow', serif},
+     'golos':       #{'Golos Text', serif}
+ );
+ 
+ /**
+  * Colors are defined using the $palette map and accessed via the palette() function.
+  * For example, if you wanted to access the color blue, you would use palette('blue')
+  * Colors could be nested as well and accessed via palette( 'key', 'color' )
+  * The colors defined here will automagically create css ready classes for font and background colors
+  */
+ 
+ $palette: (
+     'highlight' : (
+         //'primary'   : #6b6b6b,
+         //'secondary' : #BCBCBC
+         'primary'   : #7d1f2b,
+         'secondary' : #c8593b
+     ),
+     'alert' : (
+         'base'      : #777777,
+         'error'     : #f64b2f,
+         'success'   : #7eb62e,
+         'warning'   : #e1b311,
+         'notice'    : #2fa9f6
+     ),
+     'black'     : #000000,
+     'white'     : #ffffff,
+     'gray'      : #333333,
+     'gray-lt'   : #E5E5E5,
+     'red'       : #ff0000,
+     'orange'    : #ff6600,
+     'green'     : #008000,
+     'blue'      : #0050a1,
+     'yellow'    : #ffff00,
+     'maroon'    : #7d1f2b,
+     'tan-dark'  : #685d48,
+     'tan-light' : #b5a77f,
+     'tan-bg'    : #f9f8f4,
+     'bronze'    : #c8593b,
+ );
+ 
+ /**
+  * Breakpoints are used to specify when different screen styles are to take affect. Example Usage:
+  *
+  * @media ( max-width: $breakpoint-1 ) {
+  *    .class {
+  *        color: red;
+  *    }
+  * }
+  *
+  */
+ 
+/*
+ $breakpoint-1: 1080px;
+ $breakpoint-2: 920px;
+ $breakpoint-3: 670px;
+ $breakpoint-4: 550px;
+ */
+$breakpoint-1: 1024px;
+$breakpoint-2: 768px;
+$breakpoint-3: 640px;
+$breakpoint-4: 480px;

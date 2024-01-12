@@ -1,0 +1,89 @@
+#footer{
+    background-color: palette('black');
+    color: palette('white');
+    //padding: 25px 70px 10px;
+    padding: 4% 2% 2%;
+
+    ul#footer-menu {
+        float: left;
+        margin: 0;
+        padding: 10px 0;
+        list-style: none;
+
+        li {
+            padding-right: 30px;
+            display: inline-block;
+            font-size: $body-font-size - 3;
+        }
+    }
+
+    #social {
+        float:right;
+        padding: 10px 0;
+
+        a{
+            .fa,.fa-brands {
+                padding: 10px;
+                font-size: 14px;
+                width: 13px;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 50%;
+                color: palette('white');
+                background-color: palette('tan-dark');
+                margin-left:6px;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+    #footer-btm {
+        margin-top:75px;
+        overflow: auto;/*float now take up space in the dom (weird?? - but needed)*/
+        a {
+            &.phone{
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+        span{
+            padding: 0 10px
+        }
+        .wrapper{
+            padding-left:15px;
+        }
+    }
+    p{
+        &#copyright{
+            line-height: 145%;
+        }
+        font-size: $body-font-size - 3;
+        a {
+            color: palette('white');
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    #git-link {
+        p{
+            a{
+               text-decoration: underline;
+                .fa-github{
+                    &:hover{
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+        .fa-github {
+            font-size: 24px;
+            padding-right: 10px;
+            vertical-align: text-top;
+        }
+    }
+}

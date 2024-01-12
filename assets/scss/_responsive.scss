@@ -1,0 +1,432 @@
+@media ( max-width: $breakpoint-1 ) {
+
+    body {
+        font-size: ( $body-font-size - 1 );
+        &.page{
+            &.home{
+                section{
+                    .heading-title{
+                        font-size: ( $body-font-size + 15 );
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media ( max-width: $breakpoint-2 ) {
+
+    body {
+        font-size: ( $body-font-size - 2 );
+        &.page{
+            &.home{
+                #hero {
+                    #hero-content{
+                        h1{
+                            font-size: $body-font-size + 28;
+                        }
+                        .ribbon{
+                            h2{
+                                padding: 5px 15px;
+                            }
+                            .fas {
+                                font-size:10px;
+                                &.diamond{
+                                    margin: 0 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+                section {
+                    .heading-title {
+                        font-size: ( $body-font-size + 5 );
+                        margin-left: -36px;
+                        .fas {
+                            font-size: 9px;
+                            &.diamond {
+                                margin: 0 12px;
+                            }
+                        }
+                    }
+                    .heading-subtitle{
+                        font-size: ( $body-font-size + 3 );
+                    }
+                }
+            }
+        }
+    }
+}
+@media ( max-width: $breakpoint-3 ) {
+
+    body {
+        font-size: ( $body-font-size - 3 );
+        &.page {
+            &.home{
+                #hero {
+                    #hero-content{
+                        h1{
+                            font-size: $body-font-size + 20;
+                        }
+                        .ribbon{
+                            h2{
+                                padding: 5px 15px;
+                                font-size: $body-font-size + 4;
+                            }
+                            .fas {
+                                font-size: 9px;
+                                &.diamond{
+                                    margin: 0 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+                section {
+                    .col-2,.col-4 {
+                        width: 92%;
+                        
+                        img{
+                            width: 80%;
+                        }
+                    }
+                    &.categories{
+                        .col-4{
+                            margin: 4% 0;
+                        }
+                        img {
+                            width: 35%;
+                        }
+                    }
+                    &#contact-hrs{
+
+                         #contact{
+                            &.col-2{
+                                width: 87%;
+                                margin: 4% 2%;
+                            }
+                         }
+                    }
+                }
+            }
+
+
+
+
+            #page-content {
+                padding: 22% 3% 0 3%;
+                #content-with-sidebar {
+                    width: 90%;
+                    float: none;
+                }
+                #sidebar {
+                    width: 90%;
+                    float: none;
+                }
+                .wp-block-gallery {
+                    img {
+                        border-radius: 9999px;
+                    }
+                }
+                .wpcf7 {
+                    input, textarea {
+                        width: 95%;
+                    }
+                }
+                #content-with-sidebar {
+                    ul {
+                        &.steakstore_page_list{
+                            display:none;
+                        }
+                    }
+                }
+            }
+            .container {
+                .heading-subtitle{
+                    margin: 0 3%;
+                }
+                p{
+                    margin: 2.5% 5% 2.5% 5%;
+                    text-align: left;
+                }
+            }
+        }
+        #footer{
+            padding: 0 5%;
+            text-align: center;
+            font-size: 0.9em;
+
+            //reset
+            .float-left,.float-right{
+                float: none;
+            }
+
+            p{
+                &#copyright{
+                    margin: 5% 19%;
+                }
+            }
+
+            ul{
+                &#footer-menu{
+                    float: none;
+                    padding: 4% 0 0 0;
+                    li{
+                        padding:0;
+                    }
+                }
+            }
+            #social {
+                float: none;
+            }
+            #footer-btm{
+                margin-top: 2%;
+            }
+        }
+    }
+
+    .col-2,.col-3,.col-4{
+        width:100%;
+        padding: 0 2%;
+        text-align: center;
+    }
+    .flex-direction {
+        flex-direction: column;
+    }
+    
+/* Navigation Expand Menu
+-------------------------------------------------------------- */
+    #nav-expand {
+        @include flexbox();
+
+    }
+    html.mobile-nav-menu-active {
+
+        #logo-container{
+            display: none;
+        }
+        #main-menu {
+            right: 0;
+            position: unset;
+            visibility: visible;
+            z-index: 999998;
+            @include opacity(1);
+        }
+
+        #nav-expand {
+            position: fixed;
+            right: 20px;
+            //right: 50px;
+
+            z-index: 999999;
+            background-color: transparent;
+            font-size: ( $nav-expand-icon-size * 0.75 );
+
+            span.line {
+                position: relative;
+                margin-bottom: 0;
+                background-color: palette('white');
+
+                &:nth-of-type(1) {
+                    top: 9px;
+                    @include transform( rotate(45deg) );
+                }
+
+                &:nth-of-type(2) {
+                    position: absolute;
+                    @include opacity( 0 );
+                }
+
+                &:nth-of-type(3) {
+                    top: -5px;
+                    max-width: 100%;
+                    @include transform( rotate(-45deg) );
+                }
+            }
+
+            i:before {
+                content: '\d7';
+            }
+        }
+    }
+
+    #main-menu>li>a:after, #footer-menu>li>a:after{
+        display: none;//hide on mobile
+    }
+
+    #main-menu {
+        overflow-y: scroll;
+        visibility: hidden;
+        position: fixed;
+        z-index: 999998;
+        top: 10px;
+        left: 100%;
+        bottom: 0;
+        right: 10px;
+        margin: 0;
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        background: #333;
+        font-size: 0.9125em;
+        @include transition( all 0.5s );
+        @include box-sizing( border-box );
+
+        &, * {
+            border: none !important;
+            -webkit-box-shadow: none !important;
+            -moz-box-shadow: none !important;
+            box-shadow: none !important;
+        }
+
+        li {
+            position: relative !important;
+            float: none !important;
+            display: block !important;
+            clear: both !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: none !important;
+
+            a {
+                display: block !important;
+                margin: 0 !important;
+                padding: 5px 10px !important;
+                background: none !important;
+                font-size: 1.375em !important;
+                text-align: left !important;
+                text-transform: none !important;
+                color: palette('white') !important;
+            }
+
+            &.mobile-only {
+                position: relative;
+                visibility: visible;
+                left: 0;
+                height: auto;
+                width: auto;
+                overflow: auto;
+            }
+
+            ul {
+                position: static !important;
+                visibility: visible !important;
+                padding: 0 0 0 10px !important;
+                margin: 0 !important;
+                background: none !important;
+                @include opacity(1);
+            }
+        }
+
+        > li {
+
+            &:last-child {
+                padding-bottom: 30px;
+            }
+        }
+        .sub-menu {
+            li{
+                a{
+                    padding: 5px 25px !important;
+                    &:before{
+                        content: '- ';
+                    }
+                }
+            }
+        }
+    }
+    .page{
+
+        &.home {
+            section{ 
+                &#contact-hrs{
+                    #contact {
+                        h5{
+                            font-size: 1.2em;
+                            text-align: left;
+                            margin: 2.5% 5%;
+                        }
+                        #contact-info {
+                            div {
+                                margin: 2.5% 5%;
+                                width:80%;
+                                text-align:center;
+                                &.right{
+                                    position: unset;
+                                    left: unset;
+                                }
+                            }
+                        }
+                    }
+                    #hrs{
+                        width:90%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media ( max-width: $breakpoint-4 ) {
+
+    body {
+        font-size: ( $body-font-size - 4 );
+        &.page {
+            &.home{
+                
+                #hero{
+                    min-height: 550px;
+
+                    #hero-content{
+                        margin: 3% 14% 0 4%;
+
+                        h1 {
+                            font-size: $body-font-size + 18;
+                            line-height: 42px;
+                        }
+
+                        .ribbon {
+                            h2{
+                                font-size: 22px;
+                                font-weight: bold;
+                                padding: 5px 0px;
+                            }
+                        }
+                    }
+                }
+
+                section{
+                     .heading-title {
+                        font-size: ( $body-font-size + 5 );
+                        margin-left: 0px;
+                        margin-top: 0px;
+
+
+                        .fas {
+                            font-size: 10px;
+                        }
+                    }
+                    &#contact-hrs{
+                        #hrs{
+                            width: 94%;
+                        }
+                    }
+                }
+            }
+        
+
+        
+            section .container {
+                .col-2,.col-3,.col-4{
+                    width:100%;
+                    padding: 0;
+                    margin: 0 0 30px 0;
+                    text-align: center;
+                }
+            }
+            .flex-direction {
+                flex-direction: column;
+            }
+        }
+    }
+}  

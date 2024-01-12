@@ -1,0 +1,84 @@
+body{
+    &.page{
+        #header {
+            position: absolute;
+        }
+        #page-content{
+            //margin-top:55px;
+            margin-top: 10%;
+            background-image: url($theme_asset_imgpath + 'bg-wallpaper.webp');
+            padding: 0 3% 0 3%;
+            overflow: auto;
+
+
+            h1 {
+                text-align: center;
+                padding-top: 3%;
+                font-family: font-family('vast-shadow');
+                color: palette('bronze'); 
+                font-size: ( $body-font-size + 25 );
+            }
+
+            #content-with-sidebar{
+                width: 52%;
+                padding: 2% 4% 0 4%;
+                margin-bottom: 3%;
+            }
+            #content-without-sidebar{
+                padding: 2% 4% 0 4%;
+                margin-bottom: 3%;
+            }
+            #sidebar{
+                width: 30%;
+                padding: 2% 4% 0 4%;
+                margin-bottom: 3%;
+            }
+            #content-with-sidebar, #content-without-sidebar{
+                a{
+                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+                ul {
+                    &.steakstore_page_list{
+                        list-style-type: none;
+                        padding-left: 10%;
+                        li {
+                            padding: 10px;
+                            &:before{
+                                content: url($theme_asset_imgpath + 'cleaver.webp');
+                            }
+                            a{
+                                margin-left: 20px;
+                                position: relative;
+                                top: -6px;
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+        .wpcf7{ 
+            background: palette('white');
+            padding: 30px;
+            border: 1px solid palette('gray');
+            p{
+                margin:0;
+            }
+
+            &#wpcf7-f95-p13-o1{
+                input[type='email']{
+                    padding:8px;
+                }
+            }
+            input.wpcf7-submit {
+                color: palette('white');
+                padding: 10px;
+                background-color: palette('maroon');
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+}

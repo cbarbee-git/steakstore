@@ -1,0 +1,209 @@
+.page{
+
+    &.home {
+
+        #hero {
+            background-image: url($theme_asset_imgpath + 'steak-hero.webp');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            //background-attachment: fixed;
+            min-height: 750px;
+
+            #hero-content { 
+                position: absolute;
+                top: 30%;
+                left: 0;
+                right: 0;
+                margin: 3% 40% 0 4%;
+
+                h1,h2,h3,h4,h5,h6 {
+                    
+                }
+                h1 {
+                    font-family: font-family('vast-shadow');
+                    color: palette('white');
+                    font-size: $body-font-size + 42;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    line-height: 64px;
+                    letter-spacing: -2px;
+                }
+
+                .ribbon h2 {
+                    font-size: 32px;
+                    font-weight: bold;
+                    color: palette('white');
+                    margin: 0;
+                    padding: 5px 25px;
+                    font-family: font-family('georgia');
+                    
+                }
+                .ribbon {
+                    text-align: center;
+                    margin: 80px auto;
+                    --s: 1.8em; /* the ribbon size */
+                    --d: .8em;  /* the depth */
+                    --c: .8em;  /* the cutout part */
+                    
+                    padding: 0 calc(var(--s) + .5em) var(--d);
+                    line-height: 1.8;
+                    background:
+                    conic-gradient(at left  var(--s) bottom var(--d),
+                    #0000 25%,#0008 0 37.5%,#0004 0) 0   /50% 100% no-repeat,
+                    conic-gradient(at right var(--s) bottom var(--d),
+                    #0004 62.5%,#0008 0 75%,#0000 0) 100%/50% 100% no-repeat;
+                    clip-path: polygon(0 var(--d), var(--s) var(--d),var(--s) 0,calc(100% - var(--s)) 0,calc(100% - var(--s)) var(--d),100% var(--d),calc(100% - var(--c)) calc(50% + var(--d)/2),100% 100%,calc(100% - var(--s) - var(--d)) 100%,calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),calc(var(--s) + var(--d)) calc(100% - var(--d)),calc(var(--s) + var(--d)) 100%,0 100%,var(--c) calc(50% + var(--d)/2));
+                    background-color: palette('tan-light'); /* the main color */
+                    width: fit-content;
+
+                    .fas {
+                        font-size:10px;
+                        &.diamond{
+                            margin: 0 20px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        section {
+            &.bg-wallpaper {
+                background-image: url($theme_asset_imgpath + 'bg-wallpaper.webp');
+            }
+            .heading-title {
+                font-family: font-family('vast-shadow');
+                color: palette('bronze'); 
+                font-size: ( $body-font-size + 25 );
+                font-weight: 400;
+                text-transform: uppercase;
+                margin-left: -60px;
+                margin-top: 50px;
+                
+                .fas {
+                    font-size:15px;
+                    &.fa-center {
+                        vertical-align: middle;
+                    }
+                    &.diamond{
+                        margin: 0 20px 0 20px;
+                    }  
+                }
+
+            }
+
+            .heading-subtitle{
+                font-family: font-family('golos');
+                font-weight: 700;
+                color: palette('tan-dark');
+            }
+
+            .cta{
+                margin: 10%;
+
+                .btn{
+                    font-size: $body-font-size + 3;
+                    padding: 15px 40px;
+                }
+            }
+
+            &.categories{
+                .item{
+
+                    &:hover, img:hover{
+                        img, img:hover{
+                            filter: gray;
+                            -webkit-filter: grayscale(1);
+                            transition: 0.3s;
+                        }
+                    }
+                    .category-healine{
+                        margin-top:25px;
+                        color: palette('maroon');
+                        font-family: font-family('vast-shadow');
+                    }
+                }
+            }
+
+            &#contact-hrs {
+                margin: 0 1%;
+                a {
+                    color: palette('white');
+                }
+                div.container {
+                    min-height: 283px;
+                }
+                #contact {
+                    width:55%;
+                    background-image: url($theme_asset_imgpath + 'bg-contact.webp');
+                    background-size: cover;
+                    //padding: 36px 60px 30px 60px;
+                    padding:36px 4% 30px 4%;
+                    margin: 0;
+                    > * {
+                        color: palette('white');
+                    }
+                    h5 {
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+                    #contact-info {
+                        div {
+                            display:inline-block;
+                            width: 32%;
+                            &.right{
+                                //position: relative;
+                                //left: 45px;
+                                //left: 3%;
+                            }
+                        }
+                    }
+                }
+                #hrs {
+                    width: 33%;
+                    margin: 0 0 0 2%;
+                    position: relative;
+                    display: table;
+
+                    div{
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+
+                    .heading {
+                        color: palette('maroon');
+                        font-weight: 900;
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        text-align: center;
+                        opacity: 1;
+                        position: relative;
+                        font-weight: 700;
+                    }
+
+                    &:before {
+                        content: ' ';
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0.4;
+                        background-image: url($theme_asset_imgpath + 'logo.webp');
+                        background-repeat: no-repeat;
+                        background-position: 50% 0;
+                        background-size: contain;
+                    } 
+                    
+                }
+
+            }
+        }
+
+    }
+
+}

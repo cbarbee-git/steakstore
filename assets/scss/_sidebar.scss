@@ -1,0 +1,51 @@
+#sidebar {
+    ul {
+        &.steakstore_page_list{
+            list-style: none;
+            text-align: center;
+                    
+            li {
+                padding: 4% 0 4% 0;
+                border-top-width: 4px;
+                border-top-color: palette('maroon');
+                border-top-style: double;
+                border-left-width: 4px;
+                border-left-color: palette('maroon');
+                border-left-style: double;
+                border-right-width: 4px;
+                border-right-color: palette('maroon');
+                border-right-style: double;
+                &:last-child {
+                    border-bottom-width: 4px;
+                    border-bottom-color: palette('maroon');
+                    border-bottom-style: double;
+                }
+                background-size: 0% 100%;
+                background-position: 50% 50%;
+                    
+                background-image: linear-gradient(#B17461, #B17461);
+                &:hover{
+                    //color: lighten( palette('bronze'), 10% );
+                    color: palette('white');
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    transition: background-size .5s, color .5s;
+
+                    a {
+                     color: palette('white');   
+                    }
+                }
+
+                a {
+                    font-family: font-family('vast-shadow');
+                    color: palette('bronze');
+                    display: block;
+                    width: 100%;
+                } 
+            }
+        
+        }
+
+    }
+
+}

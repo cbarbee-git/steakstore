@@ -1,0 +1,30 @@
+# VS Code files
+.vscode/*
+
+.idea/*
+.well-known/*
+
+#SASS files
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# htaccess
+/.htaccess
+
+/node_modules
+/package
+/vendor
+
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+*.sql
+
+# ingore environment config
+.env
+
+# ignore all logs
+*.log

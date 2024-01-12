@@ -1,0 +1,30 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0 3% 1% 3%;
+    background: palette('black');
+    color: palette('white');
+    max-height: 75px;
+    @include clearfix();
+
+    #logo-container {
+        margin: 0;
+        padding: 0px 25px 25px 24px;
+        background-image: url( $theme_asset_imgpath + 'background-logo-border.webp');
+        background-position: center center;
+        background-repeat: no-repeat;
+        float: left;
+    
+        #logo {
+
+            img {
+                max-width: 150px;
+                display: block;
+            }
+        }
+    }
+}
