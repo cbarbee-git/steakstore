@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
+add_post_type_support( 'page', 'excerpt' );
+
 function steakstore_theme_custom_sidebar() {
     global $theme_config;
     register_sidebar(
