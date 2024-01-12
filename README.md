@@ -23,7 +23,9 @@ This project utilizes HTML5, SASS, CSS3, JavaScript, jQuery. Image and graphic c
 TODO: SEO Improvemments: Install Yoast or RankMath to better allow customized content for seach engines.
 
 The Page Speed Scores according to PageInsights as of 1/12/2024
+
 Mobile = [ Performance => 73; Accessibility => 98; Best Practices => 100; SEO => 100; ]
+
 Desktop = [ Performance => 95; Accessibility => 98; Best Practices => 100; SEO => 100; ]
 
 ### Dependencies
