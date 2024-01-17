@@ -18,7 +18,7 @@
 
 This is a custom wordpress theme build. A sample project to showcase both front-end design and back-end integration on a WordPress platform.
 
-This project utilizes HTML5, SASS, CSS3, JavaScript, jQuery. Image and graphic customization using GIMP 2.0. This site is reposonsive and tested at these breakpoints (> 1920px, 1024px, 768px, 640px, 480px)
+This project utilizes HTML5, SASS, CSS3, JavaScript, jQuery. Image and graphic customization using GIMP 2.0. This site is responsive and tested at these breakpoints (> 1920px, 1024px, 768px, 640px, 480px)
 
 TODO: SEO Improvemments: Install Yoast or RankMath to better allow customized content for seach engines.
 
